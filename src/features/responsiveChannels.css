@@ -12,7 +12,7 @@
 	text-align: center;
 	top: 0;
 	width: 70px;
-	z-index: 999;
+	z-index: 3;
 }
 
 @media (max-width: 900px) {
@@ -24,16 +24,16 @@
 		color: #fff;
 	}
 
-	#app-mount .guilds-wrapper {
+	#app-mount [class*='guildsWrapper'] {
 		padding-top: 44px;
 		z-index: 2;
 	}
 
-	.guilds-wrapper {
+	[class*='guildsWrapper'] {
 		background: #202225;
 	}
 
-	#app-mount .guilds-wrapper + div {
+	#app-mount [class*='guildsWrapper'] + div {
 		margin-right: -240px;
 		transform: translateX(-240px);
 		transition: all 0.2s ease;
@@ -41,7 +41,7 @@
 
 	.harmony_mobile-toggle.show-channels
 		+ #app-mount
-		.guilds-wrapper
+		[class*='guildsWrapper']
 		+ div {
 		transform: translateX(0);
 	}

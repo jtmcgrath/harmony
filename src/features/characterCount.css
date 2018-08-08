@@ -7,6 +7,10 @@
 	right: 44px;
 }
 
+.theme-dark .harmony_character-count {
+	color: #fff;
+}
+
 .theme-light .harmony_character-count {
 	color: #000;
 }
