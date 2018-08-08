@@ -1,7 +1,7 @@
 ;(function() {
 	const characterLimit = 2000
-	const countContainerClass = 'refined-discord_character-count'
-	const countValueClass = 'refined-discord_character-count-value'
+	const countContainerClass = 'harmony_character-count'
+	const countValueClass = 'harmony_character-count-value'
 
 	const selectCountElement = countContainer => countContainer.children[0]
 

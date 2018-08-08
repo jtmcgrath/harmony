@@ -1,4 +1,4 @@
-.refined-discord_mobile-toggle {
+.harmony_mobile-toggle {
 	align-items: center;
 	color: #afb0b2;
 	cursor: pointer;
@@ -16,11 +16,11 @@
 }
 
 @media (max-width: 900px) {
-	.refined-discord_mobile-toggle {
+	.harmony_mobile-toggle {
 		display: flex;
 	}
 
-	.refined-discord_mobile-toggle.show-channels {
+	.harmony_mobile-toggle.show-channels {
 		color: #fff;
 	}
 
@@ -39,7 +39,7 @@
 		transition: all 0.2s ease;
 	}
 
-	.refined-discord_mobile-toggle.show-channels
+	.harmony_mobile-toggle.show-channels
 		+ #app-mount
 		.guilds-wrapper
 		+ div {

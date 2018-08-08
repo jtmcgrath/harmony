@@ -1,5 +1,5 @@
 ;(function() {
-	const toggleClass = 'refined-discord_mobile-toggle'
+	const toggleClass = 'harmony_mobile-toggle'
 
 	window.addEventListener('load', () => {
 		const toggleElement = document.createElement('div')
