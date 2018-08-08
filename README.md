@@ -1,6 +1,6 @@
-<p align="center"><img src="./images/refined-discord.png" height="78" /></p>
+<p align="center"><img src="./images/harmony.png" height="78" /></p>
 
-<h2 align="center">Refined Discord</h2>
+<h2 align="center">Harmony</h2>
 
 <p align="center">A Chrome extension which simplifies the Discord interface and adds useful features.</p>
 
@@ -22,7 +22,7 @@ No guarantees that the fixes will always work - when Discord make updates, this 
 
 ## Installation
 
-Refined Discord is currently only available as a Chrome extension.
+Harmony is currently only available as a Chrome extension.
 
 [Install the Chrome extension via the webstore!](https://chrome.google.com/webstore/detail/refined-discord/jaaoemgmljmlgmpailnhdikgbpffhkkd)
 
@@ -30,19 +30,19 @@ Refined Discord is currently only available as a Chrome extension.
 
 #### Character Count
 
-Discord messages have a 2000 character limit, but there's no way to know you've passed the limit until you click send. Refined Discord adds a character count to the text input, so you can split your message into multiple pieces more easily.
+Discord messages have a 2000 character limit, but there's no way to know you've passed the limit until you click send. Harmony adds a character count to the text input, so you can split your message into multiple pieces more easily.
 
 <img src="./images/character-count.png" width="517px" />
 
 #### Toggle Channels
 
-On smaller screens, the web interface becomes unusable. Refined Discord hides the channels interface, making it togglable via a new link at the top of the list of servers.
+On smaller screens, the web interface becomes unusable. Harmony hides the channels interface, making it togglable via a new link at the top of the list of servers.
 
 <img src="./images/toggle-channels.gif" width="515px" />
 
 #### Hide Members
 
-The members section also takes up a lot of space and breaks the layout on smaller screens. Refined Discord automatically hides the members panel on small screens, both on initial load and when you resize your screen!
+The members section also takes up a lot of space and breaks the layout on smaller screens. Harmony automatically hides the members panel on small screens, both on initial load and when you resize your screen!
 
 ## Suggestions and Contributions
 
