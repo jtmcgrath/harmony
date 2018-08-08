@@ -24,7 +24,7 @@ No guarantees that the fixes will always work - when Discord make updates, this 
 
 Harmony is currently only available as a Chrome extension.
 
-[Install the Chrome extension via the webstore!](https://chrome.google.com/webstore/detail/refined-discord/jaaoemgmljmlgmpailnhdikgbpffhkkd)
+[Install the Chrome extension via the webstore!](https://chrome.google.com/webstore/detail/harmony/jaaoemgmljmlgmpailnhdikgbpffhkkd)
 
 ## Features
 
