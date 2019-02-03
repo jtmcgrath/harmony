@@ -48,7 +48,7 @@ The members section also takes up a lot of space and breaks the layout on smalle
 
 Suggestions and pull requests are highly encouraged!
 
-If you have an idea for a feature, open up an [issue](). If you're interested in contributing, take a look at the [contributing guidelines](./CONTRIBUTING.md).
+If you have an idea for a feature, open up an [issue](https://github.com/jtmcgrath/harmony/issues). If you're interested in contributing, take a look at the [contributing guidelines](./CONTRIBUTING.md).
 
 ## License
 
