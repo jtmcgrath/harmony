@@ -1,11 +1,20 @@
 let content
 let status
+let timeout
 
 const mapTypeToValue = {
+	checkbox: 'checked',
 	input: 'value',
 }
 
 const controls = [
+	{
+		id: 'channels',
+		label: 'Hide Channels',
+		initialValue: true,
+		type: 'checkbox',
+		category: 'features',
+	},
 	{
 		id: 'font-size',
 		label: 'Font Size',
@@ -16,8 +25,23 @@ const controls = [
 ]
 
 const renderControl = {
+	checkbox(id, value, { label }) {
+		return `
+			<div>
+				<label for="${id}">${label}</label>:
+			</div>
+			<div>
+				<input type="checkbox" id="${id}" ${value ? 'checked' : ''} />
+			</div>`
+	},
 	input(id, value, { label }) {
-		return `<div><label for="${id}">${label}</label>:</div><div><input type="text" id="${id}" value="${value}" /></div>`
+		return `
+			<div>
+				<label for="${id}">${label}</label>:
+			</div>
+			<div>
+				<input type="text" id="${id}" value="${value}" />
+			</div>`
 	},
 }
 
@@ -26,7 +50,10 @@ function render(state) {
 		.map(({ category, id, initialValue, type, ...settings }) =>
 			renderControl[type](
 				id,
-				(state[category] && state[category][id]) || initialValue,
+				state[category] &&
+					typeof state[category][id] !== 'undefined'
+					? state[category][id]
+					: initialValue,
 				settings
 			)
 		)
@@ -44,9 +71,10 @@ function save() {
 
 	chrome.storage.sync.set(state, () => {
 		status.textContent = 'Options saved.'
-		setTimeout(function() {
+		clearTimeout(timeout)
+		timeout = setTimeout(() => {
 			status.textContent = ''
-		}, 2000)
+		}, 1000)
 	})
 }
 
