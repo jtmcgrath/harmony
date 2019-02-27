@@ -1,0 +1,6 @@
+div[class^="content-"],
+div[class^="markup-"],
+div[class^="markup-"] pre,
+span[class^="username-"]{
+    font-size: var(--font-size) !important;
+}

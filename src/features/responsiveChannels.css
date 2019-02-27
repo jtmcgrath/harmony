@@ -24,7 +24,7 @@
 		color: #fff;
 	}
 
-	#app-mount [class*='guildsWrapper'] {
+	.harmony_mobile-toggle + #app-mount [class*='guildsWrapper'] {
 		padding-top: 44px;
 		z-index: 2;
 	}
@@ -33,7 +33,7 @@
 		background: #202225;
 	}
 
-	#app-mount [class*='guildsWrapper'] + div {
+	.harmony_mobile-toggle + #app-mount [class*='guildsWrapper'] + div {
 		margin-right: -240px;
 		transform: translateX(-240px);
 		transition: all 0.2s ease;

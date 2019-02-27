@@ -20,13 +20,20 @@
 			"matches": ["https://discordapp.com/channels/*"],
 			"css": [
 				"features/characterCount.css",
+				"features/fontSize.css",
 				"features/responsiveChannels.css"
 			],
 			"js": [
+				"features/loadOptions.js",
 				"features/characterCount.js",
 				"features/hideMembers.js",
 				"features/responsiveChannels.js"
 			]
 		}
-	]
+	],
+	"options_ui": {
+		"page": "options/options.html",
+		"open_in_tab": false
+	},
+	"permissions": ["storage"]
 }
