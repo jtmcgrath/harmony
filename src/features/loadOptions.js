@@ -13,7 +13,7 @@
 	}
 
 	window.addEventListener('load', () => {
-		chrome.storage.sync.get(null, ({ styles }) => {
+		chrome.storage.sync.get({ styles: {} }, ({ styles }) => {
 			loadStyles(styles)
 		})
 	})
