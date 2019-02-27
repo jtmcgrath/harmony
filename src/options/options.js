@@ -17,7 +17,7 @@ const controls = [
 
 const renderControl = {
 	input(id, value, { label }) {
-		return `<p>${label}: <input type="text" id="${id}" value="${value}" /></p>`
+		return `<div><label for="${id}">${label}</label>:</div><div><input type="text" id="${id}" value="${value}" /></div>`
 	},
 }
 

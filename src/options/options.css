@@ -1,0 +1,38 @@
+body {
+	padding: 6px;
+}
+
+#content {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 1fr 3fr;
+}
+
+#content input {
+	width: 100%;
+}
+
+button {
+	background-color: #7289da;
+	border: none;
+	border-radius: 3px;
+	color: white;
+	cursor: pointer;
+	line-height: 1em;
+	padding: 4px 10px;
+	text-transform: uppercase;
+}
+
+button:hover {
+	background: #4a67cf;
+}
+
+#buttons {
+	margin: 0;
+	padding-top: 6px;
+}
+
+#status {
+	color: #7289da;
+	font-style: italic;
+}
