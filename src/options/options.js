@@ -6,40 +6,40 @@ const mapTypeToValue = {
 }
 
 const controls = [
-    {
-        id: 'font-size',
-        label: 'Font Size',
-        initialValue: '16px',
-        type: 'input',
-    },
+	{
+		id: 'font-size',
+		label: 'Font Size',
+		initialValue: '16px',
+		type: 'input',
+	},
 ]
 
 const renderControl = {
-	input(id, label, value) {
+	input(id, value, { label }) {
 		return `<p>${label}: <input type="text" id="${id}" value="${value}" /></p>`
 	},
 }
 
 function render(state) {
 	content.innerHTML = controls
-		.map(({ id, initialValue, label, type }) =>
-			renderControl[type](id, label, state[id] || initialValue)
+		.map(({ id, initialValue, type, ...settings }) =>
+			renderControl[type](id, state[id] || initialValue, settings)
 		)
 		.join('')
 }
 
 function save() {
-    const state = controls.reduce((acc, { id, type }) => {
-        acc[id] = document.getElementById(id)[mapTypeToValue[type]]
-        return acc
-    }, {})
+	const state = controls.reduce((acc, { id, type }) => {
+		acc[id] = document.getElementById(id)[mapTypeToValue[type]]
+		return acc
+	}, {})
 
-    chrome.storage.sync.set(state, () => {
-        status.textContent = 'Options saved.'
-        setTimeout(function () {
-            status.textContent = ''
-        }, 2000)
-    })
+	chrome.storage.sync.set(state, () => {
+		status.textContent = 'Options saved.'
+		setTimeout(function() {
+			status.textContent = ''
+		}, 2000)
+	})
 }
 
 function init() {
@@ -47,8 +47,8 @@ function init() {
 	status = document.getElementById('status')
 
 	const initialState = controls.reduce((acc, { id, initialValue }) => {
-        acc[id] = initialValue
-        return acc
+		acc[id] = initialValue
+		return acc
 	}, {})
 
 	chrome.storage.sync.get(initialState, state => {
