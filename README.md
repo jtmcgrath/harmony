@@ -44,6 +44,10 @@ On smaller screens, the web interface becomes unusable. Harmony hides the channe
 
 The members section also takes up a lot of space and breaks the layout on smaller screens. Harmony automatically hides the members panel on small screens, both on initial load and when you resize your screen!
 
+#### Font Size
+
+You can customise the font size used for channel content in the Harmony extension settings.
+
 ## Suggestions and Contributions
 
 Suggestions and pull requests are highly encouraged!
