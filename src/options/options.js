@@ -11,6 +11,7 @@ const controls = [
 		label: 'Font Size',
 		initialValue: '16px',
 		type: 'input',
+		category: 'styles',
 	},
 ]
 
@@ -22,15 +23,22 @@ const renderControl = {
 
 function render(state) {
 	content.innerHTML = controls
-		.map(({ id, initialValue, type, ...settings }) =>
-			renderControl[type](id, state[id] || initialValue, settings)
+		.map(({ category, id, initialValue, type, ...settings }) =>
+			renderControl[type](
+				id,
+				(state[category] && state[category][id]) || initialValue,
+				settings
+			)
 		)
 		.join('')
 }
 
 function save() {
-	const state = controls.reduce((acc, { id, type }) => {
-		acc[id] = document.getElementById(id)[mapTypeToValue[type]]
+	const state = controls.reduce((acc, { id, type, category }) => {
+		if (!acc[category]) {
+			acc[category] = {}
+		}
+		acc[category][id] = document.getElementById(id)[mapTypeToValue[type]]
 		return acc
 	}, {})
 
@@ -42,19 +50,9 @@ function save() {
 	})
 }
 
-function init() {
+document.addEventListener('DOMContentLoaded', () => {
 	content = document.getElementById('content')
 	status = document.getElementById('status')
-
-	const initialState = controls.reduce((acc, { id, initialValue }) => {
-		acc[id] = initialValue
-		return acc
-	}, {})
-
-	chrome.storage.sync.get(initialState, state => {
-		render(state)
-	})
-}
-
-document.addEventListener('DOMContentLoaded', init)
+	chrome.storage.sync.get(null, render)
+})
 document.getElementById('save').addEventListener('click', save)
