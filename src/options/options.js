@@ -16,6 +16,13 @@ const controls = [
 		category: 'features',
 	},
 	{
+		id: 'charcount',
+		label: 'Character Count',
+		initialValue: true,
+		type: 'checkbox',
+		category: 'features',
+	},
+	{
 		id: 'font-size',
 		label: 'Font Size',
 		initialValue: '16px',
