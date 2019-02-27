@@ -28,5 +28,12 @@
 				"features/responsiveChannels.js"
 			]
 		}
+	],
+	"options_ui": {
+		"page": "options/options.html",
+		"open_in_tab": false
+	},
+	"permissions": [
+		"storage"
 	]
 }
