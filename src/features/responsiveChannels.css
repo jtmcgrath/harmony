@@ -24,7 +24,11 @@
 		color: #fff;
 	}
 
-	.harmony_mobile-toggle + #app-mount [class*='guildsWrapper'] {
+	.harmony_mobile-toggle
+		+ #app-mount
+		[role='dialog']
+		> div
+		> [class*='wrapper-'] {
 		padding-top: 44px;
 		z-index: 2;
 	}
@@ -33,7 +37,12 @@
 		background: #202225;
 	}
 
-	.harmony_mobile-toggle + #app-mount [class*='guildsWrapper'] + div {
+	.harmony_mobile-toggle
+		+ #app-mount
+		[role='dialog']
+		> div
+		> [class*='wrapper-']
+		+ div {
 		margin-right: -240px;
 		transform: translateX(-240px);
 		transition: all 0.2s ease;
@@ -41,7 +50,9 @@
 
 	.harmony_mobile-toggle.show-channels
 		+ #app-mount
-		[class*='guildsWrapper']
+		[role='dialog']
+		> div
+		> [class*='wrapper-']
 		+ div {
 		transform: translateX(0);
 	}
