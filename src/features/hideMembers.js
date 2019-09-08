@@ -1,9 +1,8 @@
 ;(function() {
 	const hideMembers = () => {
 		if (window.innerWidth < 900) {
-			const element = document.querySelector('[aria-label="Member List"]')
-			if (element) {
-				element.click()
+			if (document.querySelector('[class*="members"]')) {
+				document.querySelector('[aria-label="Member List"]').click()
 			}
 		}
 	}
