@@ -9,13 +9,6 @@ const mapTypeToValue = {
 
 const controls = [
 	{
-		id: 'channels',
-		label: 'Hide Channels',
-		initialValue: true,
-		type: 'checkbox',
-		category: 'features',
-	},
-	{
 		id: 'charcount',
 		label: 'Character Count',
 		initialValue: true,
@@ -28,6 +21,24 @@ const controls = [
 		initialValue: '16px',
 		type: 'input',
 		category: 'styles',
+	},
+	{
+		label: 'On Small Screens...',
+		type: 'header',
+	},
+	{
+		id: 'channels',
+		label: 'Auto-hide Channels',
+		initialValue: true,
+		type: 'checkbox',
+		category: 'features',
+	},
+	{
+		id: 'members',
+		label: 'Auto-hide Members',
+		initialValue: true,
+		type: 'checkbox',
+		category: 'features',
 	},
 ]
 
@@ -50,6 +61,9 @@ const renderControl = {
 				<input type="text" id="${id}" value="${value}" />
 			</div>`
 	},
+	header(id, value, { label }) {
+		return `<h3>${label}</h3>`
+	},
 }
 
 function render(state) {
@@ -57,8 +71,7 @@ function render(state) {
 		.map(({ category, id, initialValue, type, ...settings }) =>
 			renderControl[type](
 				id,
-				state[category] &&
-					typeof state[category][id] !== 'undefined'
+				state[category] && typeof state[category][id] !== 'undefined'
 					? state[category][id]
 					: initialValue,
 				settings
@@ -69,10 +82,14 @@ function render(state) {
 
 function save() {
 	const state = controls.reduce((acc, { id, type, category }) => {
-		if (!acc[category]) {
-			acc[category] = {}
+		if (category) {
+			if (!acc[category]) {
+				acc[category] = {}
+			}
+			acc[category][id] = document.getElementById(id)[
+				mapTypeToValue[type]
+			]
 		}
-		acc[category][id] = document.getElementById(id)[mapTypeToValue[type]]
 		return acc
 	}, {})
 
