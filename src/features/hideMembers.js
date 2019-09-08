@@ -1,10 +1,9 @@
 ;(function() {
 	const hideMembers = () => {
 		if (window.innerWidth < 900) {
-			if (document.querySelector('[class*="members"]')) {
-				document
-					.querySelector('svg[name="People"]')
-					.parentElement.click()
+			const element = document.querySelector('[aria-label="Member List"]')
+			if (element) {
+				element.click()
 			}
 		}
 	}
