@@ -21,6 +21,7 @@
 			"css": [
 				"features/small/leftSidebar.css",
 				"features/characterCount.css",
+				"features/hideGiftIcon.css",
 				"features/fontSize.css"
 			],
 			"js": [
@@ -28,6 +29,7 @@
 				"features/small/autoHideMembers.js",
 				"features/small/smallServerIcons.js",
 				"features/characterCount.js",
+				"features/hideGiftIcon.js",
 				"features/loadOptions.js"
 			]
 		}

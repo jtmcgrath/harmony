@@ -23,12 +23,19 @@ const controls = [
 		category: 'styles',
 	},
 	{
+		id: 'hide-gift-icon',
+		label: 'Hide Gift Icon',
+		initialValue: true,
+		type: 'checkbox',
+		category: 'features',
+	},
+	{
 		label: 'On Small Screens...',
 		type: 'header',
 	},
 	{
 		id: 'servers',
-		label: 'Make server icons smaller',
+		label: 'Make Server Icons Smaller',
 		initialValue: true,
 		type: 'checkbox',
 		category: 'features',
