@@ -11,6 +11,8 @@
     ·
     <a href="#features">Features</a>
     ·
+    <a href="#comparison">Comparison</a>
+    ·
     <a href="#suggestions-and-contributions">Suggestions & Contributions</a>
 </p>
 
@@ -69,6 +71,12 @@ On smaller screens, the web interface becomes unusable. Harmony hides the channe
 #### Auto-hide Members
 
 The members section also takes up a lot of space and breaks the layout on smaller screens. Harmony automatically hides the members panel on small screens, both on initial load and when you resize your screen!
+
+## Comparison
+
+Comparison of before and after installing Harmony on a small screen (iPad size):
+
+<img src="./images/before.png" width="50%" /><img src="./images/after.png" width="50%" />
 
 ## Suggestions and Contributions
 
