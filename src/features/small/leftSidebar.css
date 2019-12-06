@@ -1,0 +1,79 @@
+.harmony_mobile-toggle {
+	align-items: center;
+	color: #afb0b2;
+	cursor: pointer;
+	display: none;
+	font-size: 12px;
+	font-style: italic;
+	height: 44px;
+	justify-content: center;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 70px;
+	z-index: 3;
+}
+
+.harmony_small-servers .harmony_mobile-toggle {
+	width: 54px;
+	font-size: 10px;
+}
+
+@media (max-width: 900px) {
+	.harmony_mobile-toggle {
+		display: flex;
+	}
+
+	.harmony_mobile-toggle.show-channels {
+		color: #fff;
+	}
+
+	.harmony_mobile-toggle + #app-mount [class*='guilds-'] {
+		background: #202225;
+		padding-top: 44px;
+		z-index: 2;
+	}
+
+	.harmony_mobile-toggle + #app-mount [class*='guilds-'] + div {
+		margin-right: -240px;
+		transform: translateX(-240px);
+		transition: all 0.2s ease;
+	}
+
+	.harmony_mobile-toggle.show-channels + #app-mount [class*='guilds-'] + div {
+		transform: translateX(0);
+	}
+
+	.harmony_small-servers #app-mount [class*='guilds-'] {
+		height: calc(100% * (1 / 0.75));
+		transform: scale(0.75);
+		transform-origin: top left;
+	}
+
+	.harmony_small-servers #app-mount [class*='guilds-'] * {
+		max-width: 80px;
+	}
+
+	.harmony_small-servers #app-mount [class*='guilds-'] + div {
+		margin-right: -18px;
+		transform: translateX(-18px);
+	}
+
+	.harmony_small-servers
+		.harmony_mobile-toggle
+		+ #app-mount
+		[class*='guilds-']
+		+ div {
+		margin-right: -258px;
+		transform: translateX(-258px);
+	}
+
+	.harmony_small-servers
+		.harmony_mobile-toggle.show-channels
+		+ #app-mount
+		[class*='guilds-']
+		+ div {
+		transform: translateX(-18px);
+	}
+}

@@ -27,6 +27,13 @@ const controls = [
 		type: 'header',
 	},
 	{
+		id: 'servers',
+		label: 'Make server icons smaller',
+		initialValue: true,
+		type: 'checkbox',
+		category: 'features',
+	},
+	{
 		id: 'channels',
 		label: 'Auto-hide Channels',
 		initialValue: true,

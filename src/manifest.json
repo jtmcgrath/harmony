@@ -19,15 +19,16 @@
 			"run_at": "document_start",
 			"matches": ["https://discordapp.com/channels/*"],
 			"css": [
+				"features/small/leftSidebar.css",
 				"features/characterCount.css",
-				"features/fontSize.css",
-				"features/responsiveChannels.css"
+				"features/fontSize.css"
 			],
 			"js": [
-				"features/loadOptions.js",
+				"features/small/autoHideChannels.js",
+				"features/small/autoHideMembers.js",
+				"features/small/smallServerIcons.js",
 				"features/characterCount.js",
-				"features/hideMembers.js",
-				"features/responsiveChannels.js"
+				"features/loadOptions.js"
 			]
 		}
 	],
