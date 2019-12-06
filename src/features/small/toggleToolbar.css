@@ -1,44 +1,50 @@
 .harmony_toolbar-toggle {
-	align-items: center;
-	background: #36393f;
-	color: grey;
-	cursor: pointer;
-	display: flex;
-	height: 47px;
-	justify-content: center;
-	position: absolute;
-	right: 0;
-	top: 0;
-	width: 44px;
-	z-index: 99999;
+	display: none;
 }
 
-.harmony_toolbar-toggle ~ #app-mount [class*='title-'] [class*='children-'] {
-	padding-right: 44px;
-}
+@media (max-width: 1200px) {
+	.harmony_toolbar-toggle {
+		align-items: center;
+		background: #36393f;
+		color: grey;
+		cursor: pointer;
+		display: flex;
+		height: 47px;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 44px;
+		z-index: 101;
+	}
 
-.harmony_toolbar-toggle ~ #app-mount [class*='title-'] [class*='toolbar-'] {
-	background: inherit;
-	height: 47px;
-	justify-content: flex-end;
-	opacity: 0;
-	padding-right: 44px;
-	pointer-events: none;
-	position: absolute;
-	right: 0;
-	top: 0;
-	transition: all 0.2s ease, opacity 0.4s ease;
-	width: 100%;
-}
+	.harmony_toolbar-toggle ~ #app-mount [class*='title-'] [class*='children-'] {
+		padding-right: 44px;
+	}
 
-.harmony_toolbar-toggle.show-toolbar {
-	color: white;
-}
+	.harmony_toolbar-toggle ~ #app-mount [class*='title-'] [class*='toolbar-'] {
+		background: inherit;
+		height: 47px;
+		justify-content: flex-end;
+		opacity: 0;
+		padding-right: 44px;
+		pointer-events: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transition: all 0.2s ease, opacity 0.4s ease;
+		width: 100%;
+	}
 
-.harmony_toolbar-toggle.show-toolbar
-	~ #app-mount
-	[class*='title-']
-	[class*='toolbar-'] {
-	opacity: 1;
-	pointer-events: all;
+	.harmony_toolbar-toggle.show-toolbar {
+		color: white;
+	}
+
+	.harmony_toolbar-toggle.show-toolbar
+		~ #app-mount
+		[class*='title-']
+		[class*='toolbar-'] {
+		opacity: 1;
+		pointer-events: all;
+	}
 }
