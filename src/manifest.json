@@ -20,6 +20,7 @@
 			"matches": ["https://discordapp.com/channels/*"],
 			"css": [
 				"features/small/leftSidebar.css",
+				"features/small/toggleToolbar.css",
 				"features/characterCount.css",
 				"features/hideGiftIcon.css",
 				"features/fontSize.css"
@@ -28,6 +29,7 @@
 				"features/small/autoHideChannels.js",
 				"features/small/autoHideMembers.js",
 				"features/small/smallServerIcons.js",
+				"features/small/toggleToolbar.js",
 				"features/characterCount.js",
 				"features/hideGiftIcon.js",
 				"features/loadOptions.js"

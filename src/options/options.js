@@ -41,6 +41,13 @@ const controls = [
 		category: 'features',
 	},
 	{
+		id: 'toolbar',
+		label: 'Add Toolbar Toggle',
+		initialValue: true,
+		type: 'checkbox',
+		category: 'features',
+	},
+	{
 		id: 'channels',
 		label: 'Auto-hide Channels',
 		initialValue: true,
