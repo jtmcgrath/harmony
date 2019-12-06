@@ -16,18 +16,18 @@ const controls = [
 		category: 'features',
 	},
 	{
-		id: 'font-size',
-		label: 'Font Size',
-		initialValue: '16px',
-		type: 'input',
-		category: 'styles',
-	},
-	{
 		id: 'hide-gift-icon',
 		label: 'Hide Gift Icon',
 		initialValue: true,
 		type: 'checkbox',
 		category: 'features',
+	},
+	{
+		id: 'font-size',
+		label: 'Font Size',
+		initialValue: '16px',
+		type: 'input',
+		category: 'styles',
 	},
 	{
 		label: 'On Small Screens...',
