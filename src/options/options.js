@@ -16,6 +16,13 @@ const controls = [
 		category: 'features',
 	},
 	{
+		id: 'hide-gift-icon',
+		label: 'Hide Gift Icon',
+		initialValue: true,
+		type: 'checkbox',
+		category: 'features',
+	},
+	{
 		id: 'font-size',
 		label: 'Font Size',
 		initialValue: '16px',
@@ -25,6 +32,20 @@ const controls = [
 	{
 		label: 'On Small Screens...',
 		type: 'header',
+	},
+	{
+		id: 'servers',
+		label: 'Make Server Icons Smaller',
+		initialValue: true,
+		type: 'checkbox',
+		category: 'features',
+	},
+	{
+		id: 'toolbar',
+		label: 'Add Toolbar Toggle',
+		initialValue: true,
+		type: 'checkbox',
+		category: 'features',
 	},
 	{
 		id: 'channels',
