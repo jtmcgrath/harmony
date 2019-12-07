@@ -1,4 +1,4 @@
-;(function() {
+;(function () {
 	chrome.storage.sync.get(
 		{ features: { charcount: true } },
 		({ features }) => {
@@ -13,9 +13,7 @@
 				const createCountElement = target => {
 					const countContainer = document.createElement('div')
 					countContainer.className = countContainerClass
-					countContainer.innerHTML = `<span class="${countValueClass}">${
-						target.value.length
-					}</span>/${characterLimit}`
+					countContainer.innerHTML = `<span class="${countValueClass}"></span>/${characterLimit}`
 					target.insertAdjacentElement('afterend', countContainer)
 					return selectCountElement(countContainer)
 				}
@@ -26,13 +24,21 @@
 						: createCountElement(target)
 
 				window.addEventListener('keyup', ({ target }) => {
-					if (target.type === 'textarea') {
-						getCountElement(target).innerHTML = target.value.length
+					if (target.type === 'textarea' || Array.from(target.classList).some(className => className.startsWith('slateTextArea'))) {
+						const textarea = document.querySelector('[class*="textArea"]')
+						const characterCount = document
+							.querySelector('[class*="textArea"] [contenteditable="true"')
+							.innerText
+							.replace(/[\r\n]*/gm, '')
+							.replace(String.fromCharCode(65279), '')
+							.length
 
-						if (target.value.length > characterLimit) {
-							target.classList.add('error')
+						getCountElement(textarea).innerHTML = characterCount
+
+						if (characterCount > characterLimit) {
+							textarea.classList.add('error')
 						} else {
-							target.classList.remove('error')
+							textarea.classList.remove('error')
 						}
 					}
 				})
