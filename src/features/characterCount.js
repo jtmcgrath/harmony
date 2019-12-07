@@ -1,4 +1,4 @@
-;(function () {
+;(function() {
 	chrome.storage.sync.get(
 		{ features: { charcount: true } },
 		({ features }) => {
@@ -24,14 +24,20 @@
 						: createCountElement(target)
 
 				window.addEventListener('keyup', ({ target }) => {
-					if (target.type === 'textarea' || Array.from(target.classList).some(className => className.startsWith('slateTextArea'))) {
-						const textarea = document.querySelector('[class*="textArea"]')
+					const isSlate = Array.from(
+						target.classList
+					).some(className => className.startsWith('slateTextArea'))
+
+					if (target.type === 'textarea' || isSlate) {
+						const textarea = document.querySelector(
+							'[class*="textArea"]'
+						)
 						const characterCount = document
-							.querySelector('[class*="textArea"] [contenteditable="true"')
-							.innerText
-							.replace(/[\r\n]*/gm, '')
-							.replace(String.fromCharCode(65279), '')
-							.length
+							.querySelector(
+								'[class*="textArea"] [contenteditable="true"]'
+							)
+							.innerText.replace(/[\r\n]*/gm, '')
+							.replace(String.fromCharCode(65279), '').length
 
 						getCountElement(textarea).innerHTML = characterCount
 
