@@ -1,6 +1,6 @@
 ;(function() {
 	chrome.storage.sync.get(
-		{ features: { channels: true, } },
+		{ features: { channels: true } },
 		({ features }) => {
 			if (features.channels) {
 				const toggleClass = 'harmony_mobile-toggle'
