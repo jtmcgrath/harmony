@@ -40,12 +40,6 @@ All major features are customisable via the extension's settings page. To edit t
 
 <img src="./images/preferences.png" width="418px" />
 
-#### Character Count
-
-Discord messages have a 2000 character limit, but there's no way to know you've passed the limit until you click send. Harmony adds a character count to the text input, so you can split your message into multiple pieces more easily.
-
-<img src="./images/character-count.png" width="517px" />
-
 #### Hide Gift Icon
 
 The gift icon next to the text input takes up valuable screen space (especially on smaller screens), and isn't particularly useful. By default, Harmony hides this icon.
