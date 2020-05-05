@@ -17,7 +17,7 @@
 	"content_scripts": [
 		{
 			"run_at": "document_start",
-			"matches": ["https://discordapp.com/channels/*"],
+			"matches": ["https://discord.com/channels/*"],
 			"css": [
 				"features/small/leftSidebar.css",
 				"features/small/toggleToolbar.css",
